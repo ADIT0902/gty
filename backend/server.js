@@ -7,7 +7,7 @@ const { Server } = require("socket.io");
 const http = require("http");
 const Canvas = require("./models/canvasModel");
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "your_secret_key";
+const SECRET_KEY = "e38c27b9301e8b7d0d9e6b957f1d0a6c354b9a8c1a2f3e5f7c8e1b4d3a9f7b2c";
 
 
 const userRoutes = require("./routes/userRoutes");
@@ -29,7 +29,7 @@ connectToDB();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-      origin: ["http://localhost:3000", "https://whiteboard-tutorial-eight.vercel.app"], 
+      origin: ["http://localhost:3000"], 
       methods: ["GET", "POST"],
     },
   });
